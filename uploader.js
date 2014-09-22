@@ -165,7 +165,7 @@ var Uploader = (function($) {
                 data.append(this.name, file);
 
                 Object.defineProperty(file, '_upload', {
-                    value: $.post({
+                    value: $.ajax({
                         url: this.action,
                         data: data,
                         contentType: false,
